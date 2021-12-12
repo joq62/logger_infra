@@ -64,7 +64,7 @@ setup()->
     application:start(dbase_infra),
     DbaseSpecs=dbase_infra:get_dbase_specs(),
     [{db_host,[ok,ok,ok,ok]},
-     {db_service_catalog,[ok,ok,ok,ok,ok,ok,ok,ok,ok,ok]},
+     {db_service_catalog,[ok,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok]},
      {db_deployment,[ok,ok,ok,ok]},
      {db_pods,[ok,ok,ok,ok,ok,ok,ok,ok,ok]},
      {db_deploy_state,[ok]},
