@@ -63,12 +63,12 @@ setup()->
     %%--- Mnesia start
     application:start(dbase_infra),
     DbaseSpecs=dbase_infra:get_dbase_specs(),
-    [{db_host,[ok,ok,ok,ok]},
-     {db_service_catalog,[ok,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok]},
-     {db_deployment,[ok,ok,ok,ok]},
-     {db_pods,[ok,ok,ok,ok,ok,ok,ok,ok,ok]},
-     {db_deploy_state,[ok]},
-     {db_logger,[ok]}]=[{Module,dbase_infra:load_from_file(Module,Dir,Directive)}||{Module,Dir,Directive}<-DbaseSpecs],
+    [{db_host,ok},
+     {db_service_catalog,ok},
+     {db_deployment,ok},
+     {db_pods,ok},
+     {db_deploy_state,ok},
+     {db_logger,ok}]=[{Module,dbase_infra:load_from_file(Module,Dir,Directive)}||{Module,Dir,Directive}<-DbaseSpecs],
     ok=application:start(sd),
     ok=application:start(logger_infra),
     
